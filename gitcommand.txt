@@ -1,0 +1,75 @@
+To produce :
+git init // to produce .git in te folder directory 
+
+
+ls //
+ls -a // to show hidden file such .git
+ls -al // to show hidden file with it permission access
+git --version// to show git version
+git config --global user.name "Rozita"
+git config --global user.email "gggh@hhhh.com"
+git config --list // to show the configuration
+git config user.email// to show the email
+clear // to clear the screen 
+git help
+pwd // to show the directory
+cd ~ // change directory to home
+ 
+
+To check status:
+git status // shows all the file that is tracked or modified etc
+
+
+To commit:
+git add <filename.c> // to track the file, this is stage , we stage it for commit, if any changing in the file we need to add again and commit it. 
+git reset HEAD <filename.c> // To unstage the file, if we do not want to commit it
+git commit // to commit the changes
+1) press i // to enter insert mode
+2) Type your commit message
+3) press Esc // to exit Insert mode
+4) press :wq to run the program and finish commit 
+git commit -m 'change 3'// write changes in command window to skip above stage
+git log // shows commit history
+git add . // stage all files for tracking
+git add *.c // only stage html files
+touch .gitignore // produce the file to exclude those files not to be tracked or staged we need to edit file by typing *.exe
+1) git add .
+2) git commit -m 'adding ignore file'
+git commit -a -m 'commit message'// by adding -a we skip stage command all changes file will be stage automatically, any new file will not be stage , we need to add it manually
+git commit -am 'commit message'
+git log --author="Rozita"// it shows only rozita commit
+git diff// shows the difference of local diroctory and the sever repository only unstaged file
+git diff --staged// shows the file differences including staged and unstaged file
+git rm 'filename.txt'// to remove the file
+git mv second.txt pudding.txt // To rename second.txt to pudding.txt
+
+
+
+
+
+
+To branch and checke out merge:
+git branch MyBranch
+git checkout MyBranch
+git checkout -- filename.c //To discard changes on this file if it is not commited
+git checkout <commit no. 34568> -- <file name.c>// it will check out in specific commit
+git merge MyBranch
+git mergetool
+
+
+To stash:
+
+git stash// to stash unfinished work and swich to other branch
+git stash apply// to go back to our changes
+
+
+Remote:
+
+git remote // to show all remote repository use this command in exact folder directory
+git remote -v// it shows all origin url
+git remote add <ProjectName> <URL> // to Link local repository into public repo such as github
+git clone http://githup 
+git fetch origin // will go to origin remote server and fetch all update
+git pull origin // fetch and merge the upfate to our local repository
+git push origin master // to push changes after commit from origin to master branch . password will be reqired
+git remote add MyRepo url // to add more repo into our local repo
